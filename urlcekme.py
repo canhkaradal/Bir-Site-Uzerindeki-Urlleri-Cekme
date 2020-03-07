@@ -6,8 +6,8 @@ a=input("Urliniz:")
 metin="https://"+a
 r = requests.get(metin)
 source = BeautifulSoup(r.content,"lxml")
-melisa = source.find_all('a')
-for link in melisa:
+degisken = source.find_all('a')
+for link in degisken:
     isimler.append(link.get('href'))
 
 for i in range(len(isimler)):
